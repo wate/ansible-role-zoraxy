@@ -1,0 +1,10 @@
+# code: language=ansible
+---
+# - name: Restart zoraxy
+#   ansible.builtin.systemd_service:
+#     state: restarted
+#     name: zoraxy
+# - name: Reload zoraxy
+#   ansible.builtin.systemd_service:
+#     state: reloaded
+#     name: zoraxy

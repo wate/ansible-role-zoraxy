@@ -1,0 +1,29 @@
+# code: language=ansible
+---
+- name: Install repository dependency packages
+  ansible.builtin.apt:
+    name:
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - gnupg
+# - name: Create GPG key directory
+#   ansible.builtin.file:
+#     path: "{{ zoraxy_apt_key_dest | dirname }}"
+#     state: directory
+#     mode: "0755"
+# - name: Download GPG key
+#   ansible.builtin.get_url:
+#     url: "{{ zoraxy_apt_key_url }}"
+#     dest: "{{ zoraxy_apt_key_download_dest }}"
+#     mode: "0644"
+#   register: gpg_key_download_result
+# - name: Convert GPG key
+#   ansible.builtin.command:
+#     cmd: gpg --dearmor -o {{ zoraxy_apt_key_dest }} {{ zoraxy_apt_key_download_dest }}
+#   when: gpg_key_download_result is changed
+# - name: Add zoraxy repository
+#   ansible.builtin.apt_repository:
+#     filename: zoraxy
+#     repo: deb [signed-by={{ zoraxy_apt_key_dest }}] https://packages.repository.com/debian {{ ansible_facts.distribution_release }} main
+#     state: present

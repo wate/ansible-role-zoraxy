@@ -1,0 +1,12 @@
+---
+zoraxy_dependency_packages: []
+
+# zoraxy_apt_key_url: https://packages.repository.com/zoraxy.gpg.key
+# zoraxy_apt_key_download_dest: /etc/apt/keyrings/zoraxy.gpg.key
+# zoraxy_apt_key_dest: /etc/apt/keyrings/zoraxy.gpg
+
+# zoraxy_repo: owner_name/repo_name
+
+zoraxy_home: /opt/zoraxy
+zoraxy_user: zoraxy
+zoraxy_group: zoraxy

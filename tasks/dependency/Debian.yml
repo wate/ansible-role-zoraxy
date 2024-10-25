@@ -1,0 +1,21 @@
+# code: language=ansible
+---
+- name: Install zoraxy dependency packages
+  ansible.builtin.apt:
+    name: "{{ zoraxy_dependency_packages | default([]) }}"
+- name: Add zoraxy group
+  ansible.builtin.group:
+    name: "{{ zoraxy_group }}"
+    system: true
+- name: Add zoraxy user
+  ansible.builtin.user:
+    name: "{{ zoraxy_user }}"
+    group: "{{ zoraxy_group }}"
+    system: true
+- name: Create install directory
+  ansible.builtin.file:
+    path: "{{ zoraxy_home }}"
+    owner: "{{ zoraxy_user }}"
+    group: "{{ zoraxy_group }}"
+    state: directory
+    mode: "0755"
