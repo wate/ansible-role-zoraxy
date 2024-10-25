@@ -1,7 +1,7 @@
 zoraxy
 =================
 
-Setup zoraxy(Work in progress)
+Setup zoraxy(work in progress)
 
 OS Platform
 -----------------
