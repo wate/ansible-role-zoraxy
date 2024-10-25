@@ -2,7 +2,7 @@
 galaxy_info:
   role_name: zoraxy
   author: yoshiaki tanaka
-  description: Setup zoraxy(Work in progress)
+  description: Setup zoraxy(work in progress)
   license: Apache
   min_ansible_version: "2.16"
   platforms:
